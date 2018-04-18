@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Markup project Prusov A.A.</title>		
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header-top">
+			<div class="content">
+				<div class="logo">
+					<a href="#">
+						<h2>Danny <span>Hotel</span></h2>
+					</a>
+				</div>
+				<div class="header-menu">
+					<nav>
+						<ul id="header-menu" class="open-desktop">
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Цены</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Отзывы</a></li>
+						</ul>
+						<div class="hamburger-btn">
+							<h2>Menu</h2>
+							<div class="menu-toggle">
+	   							<div class="hamburger"></div>
+							</div>
+						</div>
+					</nav>
+				</div>				
+				<div class="header-phone">
+					<img src="img/phone-img.png" alt="Phone">
+					<ul>
+						<li>+38 095 444 50 16</li>
+						<li>+38 097 444 50 16</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="slider">
+				<button id="slider-left-btn"></button>
+				<div class="slider-content centered">
+					<div class="slider-nav">
+						<a href="#" class="active-dot"></a>
+						<a href="#"></a>
+						<a href="#"></a>
+					</div>
+					<div class="slide centered hidden current"><img src="img/slide.png" alt=""></div>
+					<div class="slide centered hidden"><img src="img/cover03.jpg" alt=""></div>
+					<div class="slide centered hidden"><img src="img/Vitale-Guestroom-King-03-PD0912-CRPD1600x760.jpg" alt=""></div>
+				</div>
+				<button id="slider-right-btn"></button>
+			</div>
+			
+		</div>
+	</header>
+	<main>
+		<div class="content">
+			<div class="top-dates centered">
+				<h3>Введите даты, чтобы найти лучшие цены</h3>
+				<form class="inputs" id="booking1">
+					<div class="input">
+						<input type="text" form="booking1" name="arive" placeholder="Дата заезда">
+						<a href="#"><i form="booking1" name="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+					</div>
+					<div class="input">
+						<input type="text" class="arive" placeholder="Дата выезда">
+						<a href="#"><i class="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+					</div>
+				</form>
+				<button type="submit" form="booking1" class="date-check-btn">Проверить наличие мест</button>
+			</div>
+			<div class="about-us">
+				<div class="description">
+					<div class="description-photo">
+						<img src="img/mont-yard-hotel.jpg" alt="Our Hotel Room">
+					</div>
+					<div class="description-text">
+						<h2>Традиции гостепреимства и технологии</h2>
+						<p>Отель объединяет традиции гостеприимства 
+						и высокие технологии современного отеля.
+						Удобное местоположение в самом сердце
+						культурного центра города, рядом с главными
+						достопримечательностями, транспортной
+						доступностью, широким спектром услуг
+						и индивидуальным подходом к каждому клиенту
+						делают в Харькове нашу гостиницу идеальным
+						местом для проживания деловых туристов
+						и путешественников.</p>
+					</div>
+				</div>
+				<div class="rooms centered">
+					<div class="room single">
+						<div class="room-text">
+							<span>Номер на одного от 750 грн.</span>
+						</div>
+						<a href="#"><img src="img/single.jpg" alt="Single Room"></a>
+					</div>
+					<div class="room twin">
+						<div class="room-text">
+							<span>Номер на двоих от 950 грн.</span>
+						</div>
+						<a href="#"><img src="img/twin.jpg" alt="Twin Room"></a>
+					</div>
+					<div class="room lux">
+						<div class="room-text">
+							<span>Номер люкс  2500 грн.</span>
+						</div>
+						<a href="#"><img src="img/lux.jpg" alt="Lux Room"></a>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="services">
+			<h2 class="services-heading">Услуги</h2>	
+			<div class="services-content centered">
+				<div class="service kitchen">
+					<div class="service-img">
+						<img src="img/kitchen.jpg" alt="itchen">
+						</div>
+					<div class="service-text">
+						<h3>Кухня</h3>
+						<p>В отеле работает ресторан, где вы можете
+						попробывать европейскую кухню. Для всех наших клиентов  	завтрак подаётся в номер бесплатно.</p>
+					</div>
+				</div>
+				<div class="service gym">
+					<div class="service-img">
+						<img src="img/gym.jpg" alt="gym">
+					</div>
+					<div class="service-text">
+						<h3>Тренажёрный зал</h3>
+						<p>Для всех наших клиентов бесплатно работает
+						тренажёрный зал, где вы сможете поддерживать
+						себя в форме. Время работы зала с 7:00 до 23:00.</p>
+						</div>
+				</div>
+				<div class="service washing">
+					<div class="service-img">
+						<img src="img/washing.jpg" alt="washing">
+					</div>
+					<div class="service-text">
+						<h3>Химчистка одежды</h3>
+						<p>У нас, для наших клиентов  работает химчистка одежды, где мы бесплатно почистим
+						Ваш костюм, пальто и т.д.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="booking">
+			<form class="bottom-form" id="booking2" action="">
+				<div class="firstPart">
+					<div class="input">
+						<input type="text" form="booking1" name="arive" placeholder="Дата заезда">
+						<a href="#"><i class="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+					</div>
+					<div class="input">
+						<input type="text" form="booking2" name="arive" placeholder="Дата выезда">
+						<a href="#"><i class="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="secondPart">
+					<div class="input">
+						<input type="text" form="booking2" name="persons" placeholder="1 гость">
+						<a href="#" id="persons-btn"></a>
+					</div>
+					<button type="submit" form="booking2" class="date-check-btn">Проверить наличие мест</button>	
+				</div>			
+			</form>
+		</div>
+		<div class="comments">
+			<div class="comments-heading">
+				<h2>Отзывы наших клиентов</h2>
+			</div>
+			<div class="comments-content centered">
+				<div class="comment-text centered">
+					<p class="hidden"></p>
+					<p class="active-comment">Превосходный отель с зарекомендованным качеством во всех направлениях. Просторные номера, удобные матрасы, приятные служащие гостиницы, замечательные завтраки с огромным выбором и наличием свежих продуктов!</p>
+					<p class="hidden"></p>
+				</div>
+				<div class="user-photos">
+					<div><img src="img/girl.png" alt="Амалия Куракина"></div>
+					<div class="active-user-img"><img src="img/boy.png" alt="Даниил Медведев"></div>
+					<div><img src="img/boy2.png" alt="Виктор Степанов"></div>
+				</div>
+				<div class="user-info">
+					<p class="user-name">
+						<span class="hidden">Амалия Куракина</span>
+						<span class="active-name">Даниил Медведев</span>
+						<span class="hidden">Виктор Степанов</span>
+					</p>
+					<p class="user-city">
+						<span class="hidden">г. Киев</span>
+						<span class="active-city">г. Харьков</span>
+						<span class="hidden">г. Мерефа</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+
+</body>
+</html>
