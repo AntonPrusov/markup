@@ -24,7 +24,6 @@ $( document ).ready(function() {
 	$('.date-check-btn').click( function(e) {
 		e.preventDefault();
 		$('.popup').css({'top': $(window).scrollTop()}).removeClass('invisible');
-		$('body').addClass('hidden2');
 
 		$('#guests').addClass('hidden');
 	});
@@ -32,14 +31,12 @@ $( document ).ready(function() {
 	$('#close-popup-form').click( function(e) {
 		e.preventDefault();
 		$('.popup').addClass('invisible');
-		$('body').removeClass('hidden2');
 	})
 
 	$('#popup-form-submit').click( function(e) {
 		e.preventDefault();
 		console.log('Form sent to the server');
 		$('.popup').addClass('invisible');
-		$('body').removeClass('hidden2');
 	})
 
 	$('#persons-btn').click( function(e) {
