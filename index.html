@@ -5,8 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Markup project Prusov A.A.</title>		
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="bower_components/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/air-datepicker/dist/js/datepicker.min.js"></script>
 	<script src="js/index.js"></script>
 </head>
 <body>
@@ -14,7 +16,7 @@
 		<div class="header-top">
 			<div class="content">
 				<div class="logo">
-					<a href="#">
+					<a href="http://markup.antonprusov2008.fe.a-level.com.ua/">
 						<h2>Danny <span>Hotel</span></h2>
 					</a>
 				</div>
@@ -38,7 +40,7 @@
 					<img src="img/phone-img.png" alt="Phone">
 					<ul>
 						<li>+38 095 444 50 16</li>
-						<li>+38 097 444 50 16</li>
+						<li>+38 097 563 50 16</li>
 					</ul>
 				</div>
 			</div>
@@ -67,12 +69,12 @@
 				<h3>Введите даты, чтобы найти лучшие цены</h3>
 				<form class="inputs" id="booking1">
 					<div class="input">
-						<input type="text" form="booking1" name="arive" placeholder="Дата заезда">
-						<a href="#"><i form="booking1" name="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+						<input type="text" form="booking1" name="arive" class="arive datepicker-here" placeholder="Дата заезда">
+						<i class="fa fa-calendar-o" aria-hidden="true"></i>
 					</div>
 					<div class="input">
-						<input type="text" class="arive" placeholder="Дата выезда">
-						<a href="#"><i class="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+						<input type="text" form="booking1" name="leave" class="leave datepicker-here" placeholder="Дата выезда">
+						<i class="fa fa-calendar-o" aria-hidden="true"></i>
 					</div>
 				</form>
 				<button type="submit" form="booking1" class="date-check-btn">Проверить наличие мест</button>
@@ -158,20 +160,40 @@
 			<form class="bottom-form" id="booking2" action="">
 				<div class="firstPart">
 					<div class="input">
-						<input type="text" form="booking1" name="arive" placeholder="Дата заезда">
-						<a href="#"><i class="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+						<input type="text" form="booking2" name="arive" class="datepicker-here" placeholder="Дата выезда">
+						<i class="fa fa-calendar-o" aria-hidden="true"></i>
 					</div>
 					<div class="input">
-						<input type="text" form="booking2" name="arive" placeholder="Дата выезда">
-						<a href="#"><i class="datepicker fa fa-calendar-o" aria-hidden="true"></i></a>
+						<input type="text" form="booking2" name="leave" class="datepicker-here" placeholder="Дата выезда">
+						<i class="fa fa-calendar-o" aria-hidden="true"></i>
 					</div>
 				</div>
 				<div class="secondPart">
-					<div class="input">
-						<input type="text" form="booking2" name="persons" placeholder="1 гость">
-						<a href="#" id="persons-btn"></a>
+					<div class="input with-plus">
+						<input type="text" form="booking2" name="persons" id="persons" placeholder="1 гость">
+						<a href="#" class="up" id="persons-btn"></a>
+
+						<div id="guests" class="input hidden">
+							<div>
+								<span>Взрослые</span>
+								
+									<a href="#" id="lessAld" class="less"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+									<input type="text" name="aldmen" id="aldmen" placeholder="1" value="1">
+									<a href="#" class="more"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+								
+							</div>
+							<div>
+								<span>Дети</span>
+								
+									<a href="#" id="lessKids" class="less"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+									<input type="text" name="kids" id="kids" placeholder="0">
+									<a href="#" class="more"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+								
+							</div>
+						</div>
+
 					</div>
-					<button type="submit" form="booking2" class="date-check-btn">Проверить наличие мест</button>	
+					<button type="submit" id="dateCheck2" form="booking2" class="date-check-btn">Проверить наличие мест</button>	
 				</div>			
 			</form>
 		</div>
@@ -181,14 +203,20 @@
 			</div>
 			<div class="comments-content centered">
 				<div class="comment-text centered">
-					<p class="hidden"></p>
-					<p class="active-comment">Превосходный отель с зарекомендованным качеством во всех направлениях. Просторные номера, удобные матрасы, приятные служащие гостиницы, замечательные завтраки с огромным выбором и наличием свежих продуктов!</p>
-					<p class="hidden"></p>
+					<p class="hidden">
+						Ну такое... На сайте все гораздо лучше чем на самом деле. Для не искушенных гостей с ограниченным бюджетом.
+					</p>
+					<p class="active-comment">
+						Превосходный отель с зарекомендованным качеством во всех направлениях. Просторные номера, удобные матрасы, приятные служащие гостиницы, замечательные завтраки с огромным выбором и наличием свежих продуктов!
+					</p>
+					<p class="hidden">
+						Нормальная гостиница, на рецепшене приветливая симпатичная девушка. Номер был чистым, кормили вкусно. Дороговато, но я был по командировочному листу, так что не заморачивался.
+					</p>
 				</div>
 				<div class="user-photos">
-					<div><img src="img/girl.png" alt="Амалия Куракина"></div>
-					<div class="active-user-img"><img src="img/boy.png" alt="Даниил Медведев"></div>
-					<div><img src="img/boy2.png" alt="Виктор Степанов"></div>
+					<div class="photo"><img src="img/girl.png" alt="Амалия Куракина"></div>
+					<div class="photo active-user-img"><img src="img/boy.png" alt="Даниил Медведев"></div>
+					<div class="photo"><img src="img/boy2.png" alt="Виктор Степанов"></div>
 				</div>
 				<div class="user-info">
 					<p class="user-name">
@@ -199,15 +227,78 @@
 					<p class="user-city">
 						<span class="hidden">г. Киев</span>
 						<span class="active-city">г. Харьков</span>
-						<span class="hidden">г. Мерефа</span>
+						<span class="hidden">г. Полтава</span>
 					</p>
 				</div>
 			</div>
 		</div>
+		<div class="map">
+			<div class="map-main">
+				<iframe id="GoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.6215840003338!2d36.22287077760629!3d50.01844756392362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a125522370af%3A0x334e2503bc425e4e!2zMjRBLCDQv9GA0L7RgdC_LiDQndCw0YPQutC4LCAyNCwg0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDYxMDAw!5e0!3m2!1sru!2sua!4v1524127354250" width="1280" height="375" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="map-text">
+				<i class="fa fa-map-marker" aria-hidden="true"></i>
+				<p>Украина,<br>
+					г. Харьков, <br>
+					пр. Науки, 24
+				</p>
+			</div>
+		</div>
 	</main>
 	<footer>
-		
+		<div class="content footer-content">
+			<div class="logo footer-el">
+				<a href="http://markup.antonprusov2008.fe.a-level.com.ua/">
+					<h2>Danny <span>Hotel</span></h2>
+				</a>
+			</div>
+			<div class="contacts footer-el">
+				<div class="address">
+					<p>Украина,<br>
+					г. Харьков, <br>
+					пр. Науки, 24
+					</p>
+				</div>
+				<div class="phone-mail">
+					<p>+38 097 563 50 16<br>
+					+38 095 444 50 16 <br>
+					info@hotel.com.ua
+					</p>
+				</div>		
+			</div>
+			<div class="social footer-el">
+				<a href="http://vk.com"><i class="fa fa-vk" aria-hidden="true"></i></a>
+				<a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			</div>
+		</div>
 	</footer>
+	<div class="popup invisible">
+		<form action="" id="popup-form">
 
+			<button id="close-popup-form"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<div>
+				<p>Ваше имя <br></p>
+				<input type="text" name="FullName" placeholder="Даниил Медведев">
+			</div>
+			<div>
+				<p>Ваш E-mail<br></p>
+				<input type="email" name="email" required="" placeholder="Danny@ukr.net">
+			</div>
+			<div class="quantity">
+				<p>Количество спальных <br> мест:</p>
+				<input type="number" name="quantity" id="quantity" placeholder="1" value="1">
+			</div>
+			
+			<div>
+				<input class="checkbox" type="checkbox" id="vip" name="vip"> <label for="vip">VIP номер:</label>
+			</div>
+
+			<div class="price centered">
+				<p>Цена номера: <span id="roomPrice">750 грн.</span></p>
+			</div>
+			<button id="popup-form-submit" type="submit" form="popup-form" value="Submit">Забронировать</button>
+		</form>
+	</div>
 </body>
 </html>
